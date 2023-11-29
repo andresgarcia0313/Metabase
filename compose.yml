@@ -1,5 +1,4 @@
 version: '3.8'
-
 services:
   postgres:
     image: postgres:alpine
@@ -29,6 +28,10 @@ services:
       - netmetabase
     depends_on:
       - postgres
+    volumes:
+      - ./metabase-data:/metabase-data
+      - ./metabase-logs:/metabase-logs
+      - ./metabase-plugins:/metabase-plugins
 
 networks:
   netmetabase:
