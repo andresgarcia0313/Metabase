@@ -29,9 +29,9 @@ services:
     depends_on:
       - postgres
     volumes:
-      - ./metabase-data:/metabase-data
-      - ./metabase-logs:/metabase-logs
-      - ./metabase-plugins:/metabase-plugins
+      - ./metabase/metabase-data:/metabase-data
+      - ./metabase/metabase-logs:/metabase-logs
+      - ./metabase/metabase-plugins:/metabase-plugins
 
 networks:
   netmetabase:
